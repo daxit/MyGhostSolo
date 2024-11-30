@@ -2109,25 +2109,21 @@ hr {
 
 /* Add specific text styling for the tech transform section */
 .tech-transform-section h2 {
-  color: #8b3e3c; /* Deep earthy red */
+  color: var(--color-darker-gray); /* Use default heading color */
 }
 
 .tech-transform-section .gh-consulting-section-intro {
-  color: #66413f; /* Muted dark red */
+  color: var(--color-secondary-text); /* Use default secondary text color */
 }
 
 .tech-transform-section .gh-consulting-features li {
-  color: #754544; /* Medium earthy red */
-}
-
-.tech-transform-section .gh-consulting-features li::before {
-  color: #8b3e3c; /* Deep earthy red - matching h2 */
+  color: var(--color-darker-gray); /* Use default text color */
 }
 
 .tech-transform-section .gh-stat-value {
-  color: #8b3e3c; /* Deep earthy red - matching h2 */
+  color: var(--color-accent); /* Use default stat value color */
 }
 
 .tech-transform-section .gh-stat-label {
-  color: #66413f; /* Muted dark red - matching intro text */
+  color: var(--color-secondary-text); /* Use default stat label color */
 }
