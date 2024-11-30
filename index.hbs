@@ -88,7 +88,7 @@
         <div class="gh-consulting-content">
             <h2>Strategic Technology & Business Consulting</h2>
             <p>With over two decades of experience leading global technology initiatives and transformations, I help organizations optimize their operations, scale efficiently, and drive substantial revenue growth.</p>
-            <a href="#consulting" class="gh-btn gh-primary-btn">
+            <a href="/consulting" class="gh-btn gh-primary-btn">
                 Learn More About Consulting
                 <span class="gh-btn-arrow">→</span>
             </a>
@@ -160,6 +160,45 @@
 
 <section class="gh-case-studies-preview gh-outer">
     <div class="gh-case-studies-preview-inner gh-inner">
+        <div class="gh-case-studies-preview-graphic">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background shape -->
+                <path fill="#c8d6af" d="M42.7,-62.9C50.9,-53.7,50.1,-35.9,51.6,-20.9C53.1,-5.9,56.9,6.3,54.7,17.8C52.5,29.3,44.3,40.1,33.6,47.1C22.9,54.1,9.7,57.4,-4.4,58.3C-18.5,59.2,-37,57.8,-48.4,48.8C-59.8,39.8,-64.1,23.2,-65.1,6.9C-66.1,-9.4,-63.8,-25.4,-55.1,-36.4C-46.4,-47.4,-31.3,-53.4,-17.1,-58.7C-2.9,-64,11.3,-68.6,24.7,-67.1C38.1,-65.6,50.7,-58,62.1,-47.1Z" transform="translate(100 100)" />
+
+                <!-- Subtle grid lines -->
+                <path fill="none" stroke="#5b7340" stroke-width="0.5" opacity="0.2" d="M40,40 h120 M40,100 h120 M40,160 h120"/>
+                <path fill="none" stroke="#5b7340" stroke-width="0.5" opacity="0.2" d="M40,40 v120 M100,40 v120 M160,40 v120"/>
+
+                <!-- Main growth curve -->
+                <path fill="none" stroke="#5b7340" stroke-width="3" d="M40,160 Q70,140 100,100 T160,40" opacity="0.8">
+                    <animate attributeName="stroke-dasharray" from="400" to="0" dur="2s" fill="freeze"/>
+                </path>
+
+                <!-- Key data points -->
+                <g>
+                    <circle cx="40" cy="160" r="6" fill="#5b7340"/>
+                    <circle cx="100" cy="100" r="6" fill="#5b7340">
+                        <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="160" cy="40" r="6" fill="#5b7340"/>
+                </g>
+
+                <!-- Success indicators -->
+                <g transform="translate(70, 70)">
+                    <circle r="15" fill="#5b7340" opacity="0.2"/>
+                    <path d="M-6,0 l5,5 l8,-8" stroke="#5b7340" stroke-width="2" fill="none">
+                        <animate attributeName="stroke-dasharray" from="20" to="0" dur="0.5s" begin="1.5s" fill="freeze"/>
+                    </path>
+                </g>
+
+                <g transform="translate(130, 130)">
+                    <circle r="15" fill="#5b7340" opacity="0.2"/>
+                    <path d="M-6,0 l5,5 l8,-8" stroke="#5b7340" stroke-width="2" fill="none">
+                        <animate attributeName="stroke-dasharray" from="20" to="0" dur="0.5s" begin="1.7s" fill="freeze"/>
+                    </path>
+                </g>
+            </svg>
+        </div>
         <div class="gh-case-studies-preview-content">
             <h2>Success Stories</h2>
             <p>Discover how organizations have achieved transformative results through strategic technology initiatives and innovative solutions.</p>
@@ -167,73 +206,6 @@
                 View Case Studies
                 <span class="gh-btn-arrow">→</span>
             </a>
-        </div>
-        <div class="gh-case-studies-preview-graphic">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <!-- Background shape -->
-                <path fill="#c8d6af" d="M42.7,-62.9C50.9,-53.7,50.1,-35.9,51.6,-20.9C53.1,-5.9,56.9,6.3,54.7,17.8C52.5,29.3,44.3,40.1,33.6,47.1C22.9,54.1,9.7,57.4,-4.4,58.3C-18.5,59.2,-37,57.8,-48.4,48.8C-59.8,39.8,-64.1,23.2,-65.1,6.9C-66.1,-9.4,-63.8,-25.4,-55.1,-36.4C-46.4,-47.4,-31.3,-53.4,-17.1,-58.7C-2.9,-64,11.3,-68.6,24.7,-67.1C38.1,-65.6,50.7,-58,62.1,-47.1Z" transform="translate(100 100)" />
-                
-                <!-- Decorative grid -->
-                <path fill="none" stroke="#5b7340" stroke-width="0.5" d="M40,40 h120 M40,160 h120" opacity="0.3"/>
-                <path fill="none" stroke="#5b7340" stroke-width="0.5" d="M40,40 v120 M160,40 v120" opacity="0.3"/>
-                
-                <!-- Growth chart -->
-                <path fill="none" stroke="#5b7340" stroke-width="2" d="M60,140 C80,140 85,100 100,100 S120,60 140,60">
-                    <animate attributeName="stroke-dasharray" from="200" to="0" dur="2s" fill="freeze"/>
-                </path>
-                
-                <!-- Animated dots on the line -->
-                <circle cx="60" cy="140" r="3" fill="#5b7340">
-                    <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="100" cy="100" r="3" fill="#5b7340">
-                    <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" begin="0.5s"/>
-                </circle>
-                <circle cx="140" cy="60" r="3" fill="#5b7340">
-                    <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" begin="1s"/>
-                </circle>
-                
-                <!-- Success indicators -->
-                <g transform="translate(70,80)">
-                    <circle cx="0" cy="0" r="15" fill="#5b7340" opacity="0.2"/>
-                    <path d="M-6,0 l5,5 l8,-8" stroke="#5b7340" stroke-width="2" fill="none">
-                        <animate attributeName="stroke-dasharray" from="20" to="0" dur="0.5s" begin="1.5s" fill="freeze"/>
-                    </path>
-                </g>
-                
-                <g transform="translate(130,100)">
-                    <circle cx="0" cy="0" r="15" fill="#5b7340" opacity="0.2"/>
-                    <path d="M-6,0 l5,5 l8,-8" stroke="#5b7340" stroke-width="2" fill="none">
-                        <animate attributeName="stroke-dasharray" from="20" to="0" dur="0.5s" begin="1.7s" fill="freeze"/>
-                    </path>
-                </g>
-                
-                <!-- Floating percentage indicators -->
-                <g opacity="0.8">
-                    <circle cx="85" cy="90" r="18" fill="#fff"/>
-                    <text x="85" y="95" text-anchor="middle" fill="#5b7340" font-size="12" font-weight="bold">
-                        +45%
-                        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2s" fill="freeze"/>
-                    </text>
-                </g>
-                
-                <g opacity="0.8">
-                    <circle cx="145" cy="70" r="18" fill="#fff"/>
-                    <text x="145" y="75" text-anchor="middle" fill="#5b7340" font-size="12" font-weight="bold">
-                        +82%
-                        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.2s" fill="freeze"/>
-                    </text>
-                </g>
-                
-                <!-- Animated progress rings -->
-                <circle cx="60" cy="120" r="12" fill="none" stroke="#5b7340" stroke-width="2" stroke-dasharray="75.4 75.4">
-                    <animate attributeName="stroke-dashoffset" from="75.4" to="0" dur="1.5s" fill="freeze"/>
-                </circle>
-                
-                <circle cx="120" cy="120" r="12" fill="none" stroke="#5b7340" stroke-width="2" stroke-dasharray="75.4 75.4">
-                    <animate attributeName="stroke-dashoffset" from="75.4" to="18.85" dur="1.5s" fill="freeze" begin="0.3s"/>
-                </circle>
-            </svg>
         </div>
     </div>
 </section>

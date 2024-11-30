@@ -1715,7 +1715,10 @@ hr {
 .gh-case-studies-preview {
   margin: 80px 0;
   padding: 40px 0;
-  background-color: #f2f7eb; /* Light sage green */
+  background-color: #f2f7eb;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
 }
 
 .gh-case-studies-preview-inner {
@@ -1725,10 +1728,11 @@ hr {
   align-items: center;
   padding: 40px;
   border-radius: 12px;
+  height: 100%;
 }
 
 .gh-case-studies-preview-content {
-  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .gh-case-studies-preview-content h2 {
@@ -1745,6 +1749,33 @@ hr {
   margin-bottom: 32px;
 }
 
+.gh-case-studies-preview-graphic svg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .gh-case-studies-preview-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .gh-case-studies-preview-content {
+    padding-left: 0;
+  }
+
+  .gh-case-studies-preview-graphic {
+    order: -1;
+  }
+
+  .gh-case-studies-preview-graphic svg {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
 .gh-case-studies-preview-content .gh-btn {
   display: inline-flex;
   align-items: center;
@@ -1752,8 +1783,8 @@ hr {
   padding: 12px 28px;
   font-size: 1.6rem;
   font-weight: 600;
-  background: #5b7340;
-  color: #fff8f0;
+  background: #5b7340; /* Sage green - matching the SVG stroke color */
+  color: #fff8f0; /* Off-white */
   border-radius: 24px;
   transition: all 0.25s ease-in-out;
   box-shadow: 0 2px 6px rgba(91, 115, 64, 0.2);
@@ -1761,17 +1792,6 @@ hr {
 
 .gh-case-studies-preview-content .gh-btn:hover {
   transform: translateY(-2px);
-  background-color: #455632;
+  background-color: #4a5c34; /* Darker sage green */
   box-shadow: 0 4px 12px rgba(91, 115, 64, 0.25);
-}
-
-@media (max-width: 991px) {
-  .gh-case-studies-preview-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .gh-case-studies-preview-content {
-    padding-right: 0;
-  }
 }
