@@ -1977,7 +1977,7 @@ hr {
 }
 
 .tech-transform-section {
-  background-color: #f5f2ed; /* Light warm beige */
+  background-color: #f5e6e6; /* Light earthy red */
   padding: 64px 0;
   margin: 0 -24px; /* Compensate for padding to extend full width */
 }
@@ -2003,7 +2003,7 @@ hr {
 
 /* Section background colors */
 .tech-transform-section {
-  background-color: #f5f2ed; /* Light warm beige */
+  background-color: #f5e6e6; /* Light earthy red */
 }
 
 .solutions-engineering-section {
@@ -2066,4 +2066,29 @@ hr {
     margin: 0 -16px;
     padding: 48px 16px;
   }
+}
+
+/* Add specific text styling for the tech transform section */
+.tech-transform-section h2 {
+  color: #8b3e3c; /* Deep earthy red */
+}
+
+.tech-transform-section .gh-consulting-section-intro {
+  color: #66413f; /* Muted dark red */
+}
+
+.tech-transform-section .gh-consulting-features li {
+  color: #754544; /* Medium earthy red */
+}
+
+.tech-transform-section .gh-consulting-features li::before {
+  color: #8b3e3c; /* Deep earthy red - matching h2 */
+}
+
+.tech-transform-section .gh-stat-value {
+  color: #8b3e3c; /* Deep earthy red - matching h2 */
+}
+
+.tech-transform-section .gh-stat-label {
+  color: #66413f; /* Muted dark red - matching intro text */
 }
