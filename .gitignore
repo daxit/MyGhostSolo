@@ -13,3 +13,6 @@ node_modules
 # Ignore dist
 dist
 .DS_Store
+
+# Ignore built files
+assets/built/*
