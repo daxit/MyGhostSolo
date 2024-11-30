@@ -1,3 +1,4 @@
+# Ignore yarn
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -5,5 +6,10 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Ignore node_modules
 node_modules
+
+# Ignore dist
 dist
+.DS_Store
