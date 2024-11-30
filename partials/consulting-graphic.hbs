@@ -1,0 +1,171 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e6eef2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5f9fc;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glowing effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background shape -->
+  <path
+    fill="url(#bg-gradient)"
+    d="M200,380 C310,380 380,310 380,200 C380,90 310,20 200,20 C90,20 20,90 20,200 C20,310 90,380 200,380 Z"
+  >
+    <animate
+      attributeName="d"
+      dur="20s"
+      repeatCount="indefinite"
+      values="M200,380 C310,380 380,310 380,200 C380,90 310,20 200,20 C90,20 20,90 20,200 C20,310 90,380 200,380 Z;
+                    M200,380 C290,360 380,290 380,200 C380,110 290,40 200,20 C110,40 20,110 20,200 C20,290 110,360 200,380 Z;
+                    M200,380 C310,380 380,310 380,200 C380,90 310,20 200,20 C90,20 20,90 20,200 C20,310 90,380 200,380 Z"
+    />
+  </path>
+
+  <!-- Circular grid -->
+  <g stroke="#3c5e8b" stroke-width="0.5" fill="none" opacity="0.2">
+    <circle cx="200" cy="200" r="160">
+      <animate
+        attributeName="r"
+        values="160;165;160"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle cx="200" cy="200" r="120">
+      <animate
+        attributeName="r"
+        values="120;125;120"
+        dur="4s"
+        repeatCount="indefinite"
+        begin="1s"
+      />
+    </circle>
+    <circle cx="200" cy="200" r="80">
+      <animate
+        attributeName="r"
+        values="80;85;80"
+        dur="4s"
+        repeatCount="indefinite"
+        begin="2s"
+      />
+    </circle>
+  </g>
+
+  <!-- Rotating connection lines -->
+  <g stroke="#3c5e8b" stroke-width="2" opacity="0.6">
+    <line x1="200" y1="200" x2="320" y2="200">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 200 200"
+        to="360 200 200"
+        dur="20s"
+        repeatCount="indefinite"
+      />
+    </line>
+    <line x1="200" y1="200" x2="280" y2="200">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="120 200 200"
+        to="480 200 200"
+        dur="15s"
+        repeatCount="indefinite"
+      />
+    </line>
+    <line x1="200" y1="200" x2="240" y2="200">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="240 200 200"
+        to="600 200 200"
+        dur="10s"
+        repeatCount="indefinite"
+      />
+    </line>
+  </g>
+
+  <!-- Pulsing nodes -->
+  <g fill="#3c5e8b" filter="url(#glow)">
+    <circle cx="320" cy="200" r="6">
+      <animate
+        attributeName="r"
+        values="4;6;4"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="opacity"
+        values="0.8;1;0.8"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 200 200"
+        to="360 200 200"
+        dur="20s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle cx="280" cy="200" r="6">
+      <animate
+        attributeName="r"
+        values="4;6;4"
+        dur="2s"
+        repeatCount="indefinite"
+        begin="0.5s"
+      />
+      <animate
+        attributeName="opacity"
+        values="0.8;1;0.8"
+        dur="2s"
+        repeatCount="indefinite"
+        begin="0.5s"
+      />
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="120 200 200"
+        to="480 200 200"
+        dur="15s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle cx="240" cy="200" r="6">
+      <animate
+        attributeName="r"
+        values="4;6;4"
+        dur="2s"
+        repeatCount="indefinite"
+        begin="1s"
+      />
+      <animate
+        attributeName="opacity"
+        values="0.8;1;0.8"
+        dur="2s"
+        repeatCount="indefinite"
+        begin="1s"
+      />
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="240 200 200"
+        to="600 200 200"
+        dur="10s"
+        repeatCount="indefinite"
+      />
+    </circle>
+  </g>
+</svg>
