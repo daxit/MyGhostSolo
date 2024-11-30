@@ -1537,3 +1537,195 @@ hr {
     padding: 32px;
   }
 }
+
+/* Blog Preview Section */
+.gh-blog-preview {
+  margin: 80px 0;
+  padding: 40px 0;
+  background-color: #f5e6d3; /* Light earthy beige - matching the secondary button color */
+}
+
+.gh-blog-preview-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.gh-blog-preview-content {
+  padding-right: 40px;
+}
+
+.gh-blog-preview-content h2 {
+  font-size: clamp(2.8rem, 0.5vw + 2.4rem, 3.6rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--color-darker-gray);
+}
+
+.gh-blog-preview-content p {
+  font-size: clamp(1.8rem, 0.27vw + 1.67rem, 2.1rem);
+  line-height: 1.6;
+  color: var(--color-secondary-text);
+  margin-bottom: 32px;
+}
+
+.gh-blog-preview-content .gh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background: var(--color-darker-gray);
+  color: #fff;
+  border-radius: 24px;
+  transition: transform 0.2s ease;
+}
+
+.gh-blog-preview-content .gh-btn:hover {
+  transform: translateY(-2px);
+}
+
+.gh-blog-preview-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gh-blog-preview-graphic svg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .gh-blog-preview-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .gh-blog-preview-content {
+    padding-right: 0;
+  }
+
+  .gh-blog-preview-graphic svg {
+    max-width: 300px;
+  }
+}
+
+/* Consulting Page Styles */
+.gh-consulting-header {
+  text-align: left;
+  margin-bottom: 80px;
+}
+
+.gh-consulting-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 120px;
+  align-items: center;
+}
+
+.gh-consulting-section.reverse {
+  direction: rtl;
+}
+
+.gh-consulting-section.reverse .gh-consulting-section-content {
+  direction: ltr;
+}
+
+.gh-consulting-section h2 {
+  font-size: clamp(2.8rem, 2.4rem + 1.5625vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--color-darker-gray);
+}
+
+.gh-consulting-section-intro {
+  font-size: clamp(1.8rem, 1.6rem + 0.5vw, 2.2rem);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  color: var(--color-secondary-text);
+}
+
+.gh-consulting-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+}
+
+.gh-consulting-features li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+  color: var(--color-darker-gray);
+}
+
+.gh-consulting-features li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.gh-consulting-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.gh-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gh-stat-value {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #8b5e3c;
+}
+
+.gh-stat-label {
+  font-size: 1.6rem;
+  color: var(--color-secondary-text);
+}
+
+.gh-consulting-section-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gh-consulting-section-graphic svg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .gh-consulting-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  .gh-consulting-section.reverse {
+    direction: ltr;
+  }
+
+  .gh-consulting-section-graphic {
+    order: -1;
+  }
+
+  .gh-consulting-section-graphic svg {
+    max-width: 300px;
+  }
+}
