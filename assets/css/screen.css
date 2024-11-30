@@ -10,7 +10,6 @@
   --color-primary-text: var(--color-darker-gray);
   --color-secondary-text-dark: rgba(0, 0, 0, 0.4);
   --color-secondary-text-light: rgba(255, 255, 255, 0.64);
-  --color-secondary-text: var(--color-secondary-text-dark);
   --color-border: rgba(0, 0, 0, 0.08);
   --gap: clamp(24px, 1.7032rem + 1.9355vw, 48px);
   --head-nav-gap: 32px;
@@ -1974,5 +1973,97 @@ hr {
 
   .gh-stat-value {
     font-size: 3.2rem;
+  }
+}
+
+.tech-transform-section {
+  background-color: #f5f2ed; /* Light warm beige */
+  padding: 64px 0;
+  margin: 0 -24px; /* Compensate for padding to extend full width */
+}
+
+.tech-transform-section .gh-consulting-section-content {
+  padding: 0 24px;
+}
+
+.tech-transform-section .gh-consulting-section-graphic {
+  padding: 0 24px;
+}
+
+@media (max-width: 767px) {
+  .tech-transform-section {
+    margin: 0 -16px;
+  }
+
+  .tech-transform-section .gh-consulting-section-content,
+  .tech-transform-section .gh-consulting-section-graphic {
+    padding: 0 16px;
+  }
+}
+
+/* Section background colors */
+.tech-transform-section {
+  background-color: #f5f2ed; /* Light warm beige */
+}
+
+.solutions-engineering-section {
+  background-color: #f2f7eb; /* Light sage green */
+}
+
+.sre-operations-section {
+  background-color: #f7f2eb; /* Light peach */
+}
+
+.revenue-growth-section {
+  background-color: #f2eff5; /* Light lavender gray */
+}
+
+/* Common section styling */
+.gh-consulting-section {
+  padding: 64px 0;
+  margin: 0 -24px;
+}
+
+.gh-consulting-section .gh-consulting-section-content {
+  padding: 0 24px;
+}
+
+.gh-consulting-section .gh-consulting-section-graphic {
+  padding: 0 24px;
+}
+
+@media (max-width: 767px) {
+  .gh-consulting-section {
+    margin: 0 -16px;
+  }
+
+  .gh-consulting-section .gh-consulting-section-content,
+  .gh-consulting-section .gh-consulting-section-graphic {
+    padding: 0 16px;
+  }
+}
+
+/* Section spacing */
+.gh-consulting-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 96px; /* Creates vertical space between sections */
+  padding: 64px 0;
+}
+
+.gh-consulting-section {
+  margin: 0 -24px; /* Existing margin for full-width backgrounds */
+  padding: 64px 24px; /* Added vertical padding inside each section */
+}
+
+@media (max-width: 767px) {
+  .gh-consulting-sections {
+    gap: 64px; /* Slightly reduced spacing on mobile */
+    padding: 48px 0;
+  }
+
+  .gh-consulting-section {
+    margin: 0 -16px;
+    padding: 48px 16px;
   }
 }

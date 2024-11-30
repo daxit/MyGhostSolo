@@ -9,7 +9,7 @@
 
         <div class="gh-consulting-sections">
             <!-- Technology Transformation Section -->
-            <section class="gh-consulting-section">
+            <section class="gh-consulting-section tech-transform-section">
                 <div class="gh-consulting-section-content">
                     <h2>Technology Transformation</h2>
                     <p class="gh-consulting-section-intro">Modernize your technology infrastructure and accelerate digital transformation initiatives with proven expertise in cloud migration and emerging technologies.</p>
@@ -34,13 +34,80 @@
                 </div>
                 <div class="gh-consulting-section-graphic">
                     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#8b5e3c" d="M39.9,-65.7C51.5,-59.6,60.8,-48.8,67.4,-36.5C74,-24.2,77.9,-10.3,76.4,2.8C74.9,15.9,68,28.2,59.7,39C51.4,49.8,41.7,59.1,30.1,64.9C18.5,70.7,5,73,-8.9,71.6C-22.8,70.2,-37.2,65,-47.7,55.9C-58.3,46.8,-65,33.8,-69.2,19.7C-73.4,5.6,-75,-9.6,-70.8,-22.5C-66.6,-35.4,-56.5,-46,-44.7,-52.4C-32.9,-58.8,-19.4,-61,-5.8,-61.7C7.8,-62.4,28.3,-71.7,39.9,-65.7Z" transform="translate(100 100)" />
+                        <!-- Background gradient -->
+                        <defs>
+                            <linearGradient id="tech-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8b5e3c;stop-opacity:0.2"/>
+                                <stop offset="100%" style="stop-color:#8b5e3c;stop-opacity:0.1"/>
+                            </linearGradient>
+                            
+                            <!-- Glow effect -->
+                            <filter id="tech-glow">
+                                <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Background shape -->
+                        <circle cx="100" cy="100" r="90" fill="url(#tech-gradient)"/>
+
+                        <!-- Server racks -->
+                        <g transform="translate(60,40)" stroke="#8b5e3c" stroke-width="2">
+                            <rect x="0" y="0" width="80" height="120" fill="none" rx="4"/>
+                            <line x1="0" y1="30" x2="80" y2="30"/>
+                            <line x1="0" y1="60" x2="80" y2="60"/>
+                            <line x1="0" y1="90" x2="80" y2="90"/>
+                            
+                            <!-- Animated server lights -->
+                            <g fill="#8b5e3c">
+                                <circle cx="70" cy="15" r="3">
+                                    <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="70" cy="45" r="3">
+                                    <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+                                </circle>
+                                <circle cx="70" cy="75" r="3">
+                                    <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" begin="0.6s"/>
+                                </circle>
+                                <circle cx="70" cy="105" r="3">
+                                    <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" begin="0.9s"/>
+                                </circle>
+                            </g>
+                        </g>
+
+                        <!-- Cloud symbol -->
+                        <g transform="translate(100,70)" filter="url(#tech-glow)">
+                            <path d="M30,20 Q40,10 50,20 Q60,10 70,20 Q80,20 80,30 Q80,40 70,40 L30,40 Q20,40 20,30 Q20,20 30,20" 
+                                  fill="none" 
+                                  stroke="#8b5e3c" 
+                                  stroke-width="2">
+                                <animate attributeName="d" 
+                                         values="M30,20 Q40,10 50,20 Q60,10 70,20 Q80,20 80,30 Q80,40 70,40 L30,40 Q20,40 20,30 Q20,20 30,20;
+                                                 M30,22 Q40,12 50,22 Q60,12 70,22 Q80,22 80,32 Q80,42 70,42 L30,42 Q20,42 20,32 Q20,22 30,22;
+                                                 M30,20 Q40,10 50,20 Q60,10 70,20 Q80,20 80,30 Q80,40 70,40 L30,40 Q20,40 20,30 Q20,20 30,20" 
+                                         dur="3s" 
+                                         repeatCount="indefinite"/>
+                            </path>
+                        </g>
+
+                        <!-- Data transfer animation -->
+                        <g stroke="#8b5e3c" stroke-width="2">
+                            <line x1="60" y1="100" x2="140" y2="100" stroke-dasharray="5,5">
+                                <animate attributeName="stroke-dashoffset" 
+                                         values="0;-20" 
+                                         dur="1s" 
+                                         repeatCount="indefinite"/>
+                            </line>
+                        </g>
                     </svg>
                 </div>
             </section>
 
             <!-- Solutions Engineering Section -->
-            <section class="gh-consulting-section reverse">
+            <section class="gh-consulting-section solutions-engineering-section reverse">
                 <div class="gh-consulting-section-content">
                     <h2>Solutions Engineering</h2>
                     <p class="gh-consulting-section-intro">Design and implement scalable, cloud-native solutions that drive operational efficiency and enable business agility.</p>
@@ -65,13 +132,54 @@
                 </div>
                 <div class="gh-consulting-section-graphic">
                     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#c8d6af" d="M42.7,-62.9C50.9,-53.7,50.1,-35.9,51.6,-20.9C53.1,-5.9,56.9,6.3,54.7,17.8C52.5,29.3,44.3,40.1,33.6,47.1C22.9,54.1,9.7,57.4,-4.4,58.3C-18.5,59.2,-37,57.8,-48.4,48.8C-59.8,39.8,-64.1,23.2,-65.1,6.9C-66.1,-9.4,-63.8,-25.4,-55.1,-36.4C-46.4,-47.4,-31.3,-53.4,-17.1,-58.7C-2.9,-64,11.3,-68.6,24.7,-67.1C38.1,-65.6,50.7,-58,62.1,-47.1Z" transform="translate(100 100)" />
+                        <defs>
+                            <linearGradient id="solutions-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#c8d6af;stop-opacity:0.2"/>
+                                <stop offset="100%" style="stop-color:#c8d6af;stop-opacity:0.1"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Background -->
+                        <rect x="20" y="20" width="160" height="160" fill="url(#solutions-gradient)" rx="10"/>
+
+                        <!-- Grid pattern -->
+                        <g stroke="#c8d6af" stroke-width="0.5" opacity="0.3">
+                            <path d="M40,40 h120 M40,80 h120 M40,120 h120 M40,160 h120"/>
+                            <path d="M40,40 v120 M80,40 v120 M120,40 v120 M160,40 v120"/>
+                        </g>
+
+                        <!-- Animated gears -->
+                        <g transform="translate(100,100)">
+                            <path d="M0,-30 L5,-20 L15,-25 L20,-15 L30,-20 L25,-10 L35,-5 L30,5 L40,10 L25,15 L30,25 L20,20 L15,30 L5,20 L0,30 L-5,20 L-15,25 L-20,15 L-30,20 L-25,10 L-35,5 L-30,-5 L-40,-10 L-25,-15 L-30,-25 L-20,-20 L-15,-30 L-5,-20 Z" 
+                                  fill="#c8d6af" 
+                                  opacity="0.8">
+                                <animateTransform attributeName="transform"
+                                                  type="rotate"
+                                                  from="0 0 0"
+                                                  to="360 0 0"
+                                                  dur="10s"
+                                                  repeatCount="indefinite"/>
+                            </path>
+                        </g>
+
+                        <!-- Code blocks -->
+                        <g transform="translate(50,70)">
+                            <rect x="0" y="0" width="60" height="4" fill="#c8d6af" rx="2">
+                                <animate attributeName="width" values="60;40;60" dur="3s" repeatCount="indefinite"/>
+                            </rect>
+                            <rect x="0" y="10" width="40" height="4" fill="#c8d6af" rx="2">
+                                <animate attributeName="width" values="40;50;40" dur="3s" repeatCount="indefinite" begin="1s"/>
+                            </rect>
+                            <rect x="0" y="20" width="50" height="4" fill="#c8d6af" rx="2">
+                                <animate attributeName="width" values="50;30;50" dur="3s" repeatCount="indefinite" begin="2s"/>
+                            </rect>
+                        </g>
                     </svg>
                 </div>
             </section>
 
             <!-- SRE & Operations Section -->
-            <section class="gh-consulting-section">
+            <section class="gh-consulting-section sre-operations-section">
                 <div class="gh-consulting-section-content">
                     <h2>SRE & Operations Support</h2>
                     <p class="gh-consulting-section-intro">Build and optimize world-class operations teams and processes that ensure reliability, scalability, and exceptional service delivery.</p>
@@ -96,13 +204,61 @@
                 </div>
                 <div class="gh-consulting-section-graphic">
                     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#d6bbb1" d="M48.2,-69.8C62.3,-61.8,73.4,-47.9,77.9,-32.1C82.4,-16.3,80.3,1.3,74.7,17.1C69.1,32.9,60,46.8,47.4,56.6C34.8,66.4,18.7,72,-0.2,72.3C-19.1,72.6,-38.2,67.6,-51.9,57.1C-65.6,46.6,-73.9,30.6,-77.1,13.2C-80.3,-4.2,-78.4,-23,-69.7,-37.5C-61,-52,-45.5,-62.2,-30.8,-69.6C-16.1,-77,-8,-81.7,4.4,-78.1C16.8,-74.5,33.7,-62.7,48.2,-69.8Z" transform="translate(100 100)" />
+                        <defs>
+                            <linearGradient id="ops-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#d6bbb1;stop-opacity:0.2"/>
+                                <stop offset="100%" style="stop-color:#d6bbb1;stop-opacity:0.1"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Background circle -->
+                        <circle cx="100" cy="100" r="90" fill="url(#ops-gradient)"/>
+
+                        <!-- Monitoring graph -->
+                        <g transform="translate(40,100)" fill="none" stroke="#d6bbb1" stroke-width="2">
+                            <path d="M0,0 L20,-20 L40,-10 L60,-30 L80,-15 L100,-40 L120,-20">
+                                <animate attributeName="d" 
+                                         values="M0,0 L20,-20 L40,-10 L60,-30 L80,-15 L100,-40 L120,-20;
+                                                 M0,0 L20,-15 L40,-25 L60,-20 L80,-35 L100,-25 L120,-30;
+                                                 M0,0 L20,-20 L40,-10 L60,-30 L80,-15 L100,-40 L120,-20" 
+                                         dur="5s" 
+                                         repeatCount="indefinite"/>
+                            </path>
+                        </g>
+
+                        <!-- Status indicators -->
+                        <g transform="translate(60,60)">
+                            <circle cx="0" cy="0" r="5" fill="#d6bbb1">
+                                <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="40" cy="0" r="5" fill="#d6bbb1">
+                                <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+                                <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+                            </circle>
+                            <circle cx="80" cy="0" r="5" fill="#d6bbb1">
+                                <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+                                <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+                            </circle>
+                        </g>
+
+                        <!-- Rotating metrics -->
+                        <g transform="translate(100,100)">
+                            <circle cx="0" cy="0" r="40" fill="none" stroke="#d6bbb1" stroke-width="1" stroke-dasharray="3,3">
+                                <animateTransform attributeName="transform"
+                                                  type="rotate"
+                                                  from="0 0 0"
+                                                  to="360 0 0"
+                                                  dur="20s"
+                                                  repeatCount="indefinite"/>
+                            </circle>
+                        </g>
                     </svg>
                 </div>
             </section>
 
             <!-- Revenue Growth Section -->
-            <section class="gh-consulting-section reverse">
+            <section class="gh-consulting-section revenue-growth-section reverse">
                 <div class="gh-consulting-section-content">
                     <h2>Revenue Growth</h2>
                     <p class="gh-consulting-section-intro">Transform technology investments into measurable business outcomes and sustainable revenue growth through customer-centric strategies.</p>
@@ -127,7 +283,53 @@
                 </div>
                 <div class="gh-consulting-section-graphic">
                     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#8b5e3c" d="M54.2,-67.1C69.4,-55.3,80.4,-37.5,83.7,-18.1C87,1.3,82.5,22.3,71.8,37.6C61.1,52.9,44.1,62.4,26.5,67.7C8.9,72.9,-9.4,73.8,-27.4,68.9C-45.4,64,-63.1,53.2,-73.5,36.6C-83.9,20,-87,-2.5,-81.5,-21.7C-76,-40.9,-61.8,-56.8,-45.3,-68.3C-28.8,-79.8,-10,-86.9,5.1,-83.1C20.2,-79.3,40.4,-64.6,54.2,-67.1Z" transform="translate(100 100)" />
+                        <defs>
+                            <linearGradient id="revenue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8b5e3c;stop-opacity:0.2"/>
+                                <stop offset="100%" style="stop-color:#8b5e3c;stop-opacity:0.1"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Background -->
+                        <rect x="20" y="20" width="160" height="160" fill="url(#revenue-gradient)" rx="10"/>
+
+                        <!-- Growth chart -->
+                        <g transform="translate(40,160)" fill="none" stroke="#8b5e3c" stroke-width="2">
+                            <path d="M0,0 C30,-30 60,-45 120,-100">
+                                <animate attributeName="d" 
+                                         values="M0,0 C30,-30 60,-45 120,-100;
+                                                 M0,0 C30,-40 60,-55 120,-110;
+                                                 M0,0 C30,-30 60,-45 120,-100" 
+                                         dur="4s" 
+                                         repeatCount="indefinite"/>
+                            </path>
+                            
+                            <!-- Animated data point -->
+                            <circle cx="120" cy="-100" r="5" fill="#8b5e3c">
+                                <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+
+                        <!-- Currency symbols -->
+                        <g fill="#8b5e3c" opacity="0.8">
+                            <text x="60" y="80" font-size="14">$</text>
+                            <text x="90" y="60" font-size="14">€</text>
+                            <text x="120" y="40" font-size="14">¥</text>
+                            
+                            <!-- Floating animation -->
+                            <animateTransform attributeName="transform"
+                                              type="translate"
+                                              values="0 0; 0 -5; 0 0"
+                                              dur="3s"
+                                              repeatCount="indefinite"/>
+                        </g>
+
+                        <!-- Percentage indicators -->
+                        <g transform="translate(140,70)">
+                            <text x="0" y="0" font-size="12" fill="#8b5e3c">+40%</text>
+                            <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+                        </g>
                     </svg>
                 </div>
             </section>
