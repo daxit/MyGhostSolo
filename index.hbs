@@ -2,41 +2,39 @@
 
 <section class="gh-about gh-outer{{#match @custom.header_section_layout "!=" "Typographic profile"}}{{#unless @site.cover_image}} no-image{{/unless}}{{else}}{{#unless @site.icon}} no-image{{/unless}}{{/match}}">
     <div class="gh-about-inner gh-inner">
-        {{#match @custom.header_section_layout "!=" "Typographic profile"}}
-            {{#if @site.cover_image}}
-                <img class="gh-about-image" src="{{@site.cover_image}}" alt="{{@site.title}}">
-            {{/if}}
-        {{else}}
-            {{#if @site.icon}}
-                <img class="gh-about-image" src="{{@site.icon}}" alt="{{@site.title}}">
-            {{/if}}
-        {{/match}}
-        <script>
-            (function () {
-                if (!document.body.classList.contains('has-background-about')) return;
-
-                const about = document.querySelector('.gh-about');
-                if (!about) return;
-
-                const image = about.querySelector('.gh-about-image');
-
-                about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
-                about.classList.add('initialized');
-            })();
-        </script>
         <div class="gh-about-content">
             <div class="gh-about-content-inner">
-                {{#if @custom.primary_header}}
-                    <h1 class="gh-about-primary">{{{@custom.primary_header}}}</h1>
-                {{/if}}
-                {{#if @custom.secondary_header}}
-                    <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
-                {{/if}}
+                <h1 class="gh-about-primary">Transforming Businesses Through Technology Leadership</h1>
+                <p class="gh-about-secondary">Strategic consulting for organizations seeking exponential growth through digital transformation and operational excellence.</p>
+                
+                <div class="gh-about-stats">
+                    <div class="gh-stat">
+                        <span class="gh-stat-value" data-count="20">20+</span>
+                        <span class="gh-stat-label">Years Experience</span>
+                    </div>
+                    <div class="gh-stat">
+                        <span class="gh-stat-value" data-count="300">$300M+</span>
+                        <span class="gh-stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="gh-stat">
+                        <span class="gh-stat-value" data-count="9">9</span>
+                        <span class="gh-stat-label">Global Centers</span>
+                    </div>
+                </div>
+
                 <div class="gh-about-buttons">
-                    <a href="#consulting" class="gh-btn gh-primary-btn">Learn About Consulting</a>
-                    <a href="/case-studies" class="gh-btn gh-secondary-btn">View Case Studies</a>
+                    <a href="https://calendly.com/your-link" class="gh-btn gh-primary-btn">
+                        Schedule a Consultation
+                        <span class="gh-btn-arrow">→</span>
+                    </a>
+                    <a href="/case-studies" class="gh-btn gh-secondary-btn">View Success Stories</a>
                 </div>
             </div>
+        </div>
+        
+        <div class="gh-about-graphic">
+            <!-- Use the existing circuit board SVG animation from consulting section -->
+            {{> "consulting-graphic"}}
         </div>
     </div>
 </section>
