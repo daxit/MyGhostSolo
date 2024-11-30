@@ -1162,58 +1162,98 @@ hr {
 
 /* Consulting CTA section */
 .gh-consulting-cta {
-  margin-top: 48px;
-  padding: 48px;
-  background: var(--color-lighter-gray);
-  border-radius: 12px;
-  text-align: center;
+  background-color: #f5e6d3; /* Light earthy beige */
+  padding: 64px 24px;
+  margin: 80px 0;
 }
 
 .gh-consulting-cta-inner {
-  max-width: 560px;
+  max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .gh-consulting-cta h3 {
-  font-size: clamp(2.2rem, 0.5vw + 1.8rem, 2.8rem);
+  font-size: clamp(2.8rem, 0.5vw + 2.4rem, 3.6rem);
   font-weight: 800;
-  margin-bottom: 12px;
-  letter-spacing: -0.02em;
+  color: #4a2511; /* Dark brown */
+  margin-bottom: 24px;
+  line-height: 1.2;
 }
 
 .gh-consulting-cta p {
-  font-size: clamp(1.6rem, 0.2vw + 1.4rem, 1.8rem);
-  line-height: 1.5;
-  margin-bottom: 24px;
-  opacity: 0.9;
+  font-size: clamp(1.8rem, 0.27vw + 1.67rem, 2.1rem);
+  color: #66413f; /* Muted dark red */
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
 }
 
-.gh-consulting-cta .gh-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.gh-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gh-cta-buttons .gh-btn {
   padding: 12px 28px;
   font-size: 1.6rem;
   font-weight: 600;
-  background: var(--color-darker-gray);
-  color: #fff;
   border-radius: 24px;
-  transition: transform 0.2s ease;
+  transition: all 0.25s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.gh-consulting-cta .gh-btn:hover {
+.gh-cta-buttons .gh-primary-btn {
+  background: #8b5e3c; /* Warm brown */
+  color: #fff8f0; /* Off-white */
+  box-shadow: 0 2px 6px rgba(139, 94, 60, 0.2);
+}
+
+.gh-cta-buttons .gh-primary-btn:hover {
+  background: #a06f47; /* Lighter warm brown */
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 94, 60, 0.25);
+}
+
+.gh-cta-buttons .gh-secondary-btn {
+  background: #fff8f0; /* Off-white */
+  color: #8b5e3c; /* Warm brown */
+  box-shadow: 0 2px 6px rgba(139, 94, 60, 0.1);
+}
+
+.gh-cta-buttons .gh-secondary-btn:hover {
+  background: #fff; /* Pure white */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 94, 60, 0.15);
 }
 
 .gh-btn-arrow {
-  font-size: 18px;
-  line-height: 0;
+  font-size: 1.8rem;
+  transition: transform 0.2s ease;
+}
+
+.gh-btn:hover .gh-btn-arrow {
+  transform: translateX(4px);
 }
 
 @media (max-width: 767px) {
   .gh-consulting-cta {
-    padding: 32px 24px;
-    margin-top: 40px;
+    padding: 48px 16px;
+    margin: 60px 0;
+  }
+
+  .gh-cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .gh-cta-buttons .gh-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
