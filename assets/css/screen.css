@@ -1,10 +1,12 @@
-@import '@tryghost/shared-theme-assets/assets/css/v1/screen.css';
-@import 'fonts.css';
+@import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
+@import "fonts.css";
 
 :root {
-  --font-sans: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  --font-sans: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+    Arial, sans-serif;
   --font-serif: Libre Baskerville, Georgia, Times, serif;
-  --font-mono: JetBrains Mono, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --font-mono: JetBrains Mono, Menlo, Consolas, Monaco, Liberation Mono,
+    Lucida Console, monospace;
   --color-primary-text: var(--color-darker-gray);
   --color-secondary-text-dark: rgba(0, 0, 0, 0.4);
   --color-secondary-text-light: rgba(255, 255, 255, 0.64);
@@ -159,16 +161,16 @@ hr {
   line-height: 1.2;
 }
 
-.has-serif-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-serif-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-about-primary {
   font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-mono-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-about-primary {
   font-family: var(--gh-font-heading, var(--font-mono));
 }
@@ -184,16 +186,16 @@ hr {
   letter-spacing: -0.008em;
 }
 
-.has-serif-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-serif-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-about-secondary {
   font-family: var(--gh-font-body, var(--font-serif));
 }
 
-.has-mono-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-mono-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-about-secondary {
   font-family: var(--gh-font-body, var(--font-mono));
 }
@@ -254,7 +256,7 @@ hr {
 .has-background-about .gh-about::before {
   position: absolute;
   inset: 0;
-  content: '';
+  content: "";
   background-color: var(--color-black);
   transition: opacity 1.5s ease;
 }
@@ -360,16 +362,16 @@ hr {
   word-break: break-word;
 }
 
-.has-serif-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-serif-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-card-title {
   font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-mono-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-card-title {
   font-family: var(--gh-font-heading, var(--font-mono));
 }
@@ -398,7 +400,7 @@ hr {
 .gh-card-meta > * + *:not(script):not(.gh-card-access)::before {
   width: 2px;
   height: 2px;
-  content: '';
+  content: "";
   background-color: currentColor;
   border-radius: 50%;
 }
@@ -449,7 +451,7 @@ hr {
 .has-classic-feed .gh-card-image::before {
   display: block;
   padding-bottom: 56.25%;
-  content: '';
+  content: "";
 }
 
 .has-classic-feed .no-image .gh-card-image {
@@ -511,16 +513,16 @@ hr {
   letter-spacing: -0.005em;
 }
 
-.has-serif-font.has-typographic-feed:not([class*=' gh-font-heading']):not(
-    [class^='gh-font-heading']
-  ):not([class*=' gh-font-body']):not([class^='gh-font-body'])
+.has-serif-font.has-typographic-feed:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-card-excerpt {
   font-family: var(--gh-font-body, var(--font-serif));
 }
 
-.has-mono-font.has-typographic-feed:not([class*=' gh-font-heading']):not(
-    [class^='gh-font-heading']
-  ):not([class*=' gh-font-body']):not([class^='gh-font-body'])
+.has-mono-font.has-typographic-feed:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-card-excerpt {
   font-family: var(--gh-font-body, var(--font-mono));
 }
@@ -559,7 +561,7 @@ hr {
   position: absolute;
   width: 100%;
   height: 100%;
-  content: '';
+  content: "";
   background-color: #000;
   opacity: 0.6;
   transition: opacity 0.4s;
@@ -712,16 +714,16 @@ hr {
   letter-spacing: -0.03em;
 }
 
-.has-serif-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-serif-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-article-title {
   font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-mono-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-article-title {
   font-family: var(--gh-font-heading, var(--font-mono));
 }
@@ -734,16 +736,16 @@ hr {
   line-height: 1.45;
 }
 
-.has-serif-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-serif-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-article-excerpt {
   font-family: var(--gh-font-body, var(--font-serif));
 }
 
-.has-mono-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-mono-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-article-excerpt {
   font-family: var(--gh-font-body, var(--font-mono));
 }
@@ -773,17 +775,17 @@ hr {
   font-weight: 800;
 }
 
-.has-serif-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-serif-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-content
   > :is([id], p, ul, ol) {
   font-family: var(--gh-font-body, var(--font-serif));
 }
 
-.has-mono-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-mono-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-content
   > :is([id], p, ul, ol) {
   font-family: var(--gh-font-body, var(--font-mono));
@@ -844,7 +846,8 @@ hr {
   position: relative;
   z-index: 20;
   grid-column: 1 / span 12 !important;
-  padding: clamp(8rem, 10.71vw + 2.86rem, 20rem) clamp(4.8rem, 4.64vw + 2.57rem, 10rem);
+  padding: clamp(8rem, 10.71vw + 2.86rem, 20rem)
+    clamp(4.8rem, 4.64vw + 2.57rem, 10rem);
   margin-top: clamp(8rem, 7.14vw + 4.57rem, 16rem);
   background-color: var(--color-lighter-gray);
   transform: translate3d(0, 0, 0);
@@ -857,16 +860,16 @@ hr {
   letter-spacing: -0.03em;
 }
 
-.has-serif-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-serif-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-cta-title {
   font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-mono-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-cta-title {
   font-family: var(--gh-font-heading, var(--font-mono));
 }
@@ -889,16 +892,16 @@ hr {
   letter-spacing: -0.02em;
 }
 
-.has-serif-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-serif-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-navigation {
   font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-mono-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-navigation {
   font-family: var(--gh-font-heading, var(--font-mono));
 }
@@ -915,16 +918,16 @@ hr {
   font-weight: 800;
 }
 
-.has-serif-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-serif-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-comments-title {
   font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font:not([class*=' gh-font-heading']):not([class^='gh-font-heading']):not(
-    [class*=' gh-font-body']
-  ):not([class^='gh-font-body'])
+.has-mono-font:not([class*=" gh-font-heading"]):not(
+    [class^="gh-font-heading"]
+  ):not([class*=" gh-font-body"]):not([class^="gh-font-body"])
   .gh-comments-title {
   font-family: var(--gh-font-heading, var(--font-mono));
 }
@@ -1081,7 +1084,7 @@ hr {
 }
 
 .gh-consulting-item h3::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -1365,7 +1368,7 @@ hr {
 }
 
 .gh-blog-reading-time::before {
-  content: '•';
+  content: "•";
   position: absolute;
   left: 8px;
   color: var(--color-secondary-text);
@@ -1378,5 +1381,102 @@ hr {
 
   .gh-blog-reading-time::before {
     left: 6px;
+  }
+}
+
+/* Case Studies
+/* ---------------------------------------------------------- */
+
+.gh-case-studies-header {
+  margin-bottom: 64px;
+  text-align: left;
+}
+
+.gh-case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 0 auto;
+  max-width: var(--container-width);
+}
+
+.gh-case-study-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-lighter-gray);
+  transition: transform 0.3s ease;
+  border: 1px solid var(--color-border);
+}
+
+.gh-case-study-card:hover {
+  transform: translateY(-4px);
+}
+
+.gh-case-study-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+}
+
+.gh-case-study-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.gh-case-study-content {
+  padding: 32px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.gh-case-study-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--color-darker-gray);
+}
+
+.gh-case-study-excerpt {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-secondary-text);
+  margin-bottom: 24px;
+}
+
+.gh-case-study-meta {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--color-secondary-text);
+}
+
+.gh-case-study-arrow {
+  font-size: 2rem;
+  color: var(--color-blue);
+  transition: transform 0.2s ease;
+}
+
+.gh-case-study-card:hover .gh-case-study-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .gh-case-studies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .gh-case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gh-case-study-image {
+    height: 200px;
   }
 }
