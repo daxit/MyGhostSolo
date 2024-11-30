@@ -1,0 +1,43 @@
+{{!< default}}
+
+<main class="gh-main gh-outer">
+  <div class="gh-inner">
+    <section class="gh-case-studies-header gh-canvas">
+      <h1 class="gh-article-title">Case Studies</h1>
+      <p class="gh-article-excerpt">Real-world examples of successful technology
+        transformations</p>
+    </section>
+
+    <div class="gh-case-studies-feed">
+      {{#get "posts" filter="tag:case-study" limit="3" include="tags,authors"}}
+        <div class="gh-case-studies-grid">
+          {{#foreach posts}}
+            <article class="gh-case-study-card">
+              <a class="gh-case-study-link" href="{{url}}">
+                {{#if feature_image}}
+                  <img
+                    class="gh-case-study-image"
+                    src="{{feature_image}}"
+                    alt="{{title}}"
+                  />
+                {{/if}}
+                <div class="gh-case-study-content">
+                  <h2 class="gh-case-study-title">{{title}}</h2>
+                  {{#if custom_excerpt}}
+                    <p class="gh-case-study-excerpt">{{custom_excerpt}}</p>
+                  {{/if}}
+                  <div class="gh-case-study-meta">
+                    <time
+                      datetime="{{date format="YYYY-MM-DD"}}"
+                    >{{date}}</time>
+                    <span class="gh-case-study-arrow">→</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          {{/foreach}}
+        </div>
+      {{/get}}
+    </div>
+  </div>
+</main>
