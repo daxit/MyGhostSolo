@@ -8,7 +8,12 @@
     </section>
 
     <div class="gh-blogs-feed">
-      {{#get "posts" limit="1" filter="featured:true" include="tags,authors"}}
+      {{#get
+        "posts"
+        limit="1"
+        filter="featured:true+tag:-case-study"
+        include="tags,authors"
+      }}
         {{#foreach posts}}
           <article class="gh-blog-featured">
             <a class="gh-blog-link" href="{{url}}">
@@ -41,7 +46,10 @@
 
       <div class="gh-blogs-grid">
         {{#get
-          "posts" limit="all" filter="featured:false" include="tags,authors"
+          "posts"
+          limit="all"
+          filter="featured:false+tag:-case-study"
+          include="tags,authors"
         }}
           {{#foreach posts}}
             <article class="gh-blog-card">

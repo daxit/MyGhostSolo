@@ -12,15 +12,8 @@
       {{#get "posts" filter="tag:case-study" limit="3" include="tags,authors"}}
         <div class="gh-case-studies-grid">
           {{#foreach posts}}
-            <article class="gh-case-study-card">
+            <article class="gh-case-study-card {{#if @even}}image-right{{else}}image-left{{/if}}">
               <a class="gh-case-study-link" href="{{url}}">
-                {{#if feature_image}}
-                  <img
-                    class="gh-case-study-image"
-                    src="{{feature_image}}"
-                    alt="{{title}}"
-                  />
-                {{/if}}
                 <div class="gh-case-study-content">
                   <h2 class="gh-case-study-title">{{title}}</h2>
                   {{#if custom_excerpt}}
@@ -33,6 +26,15 @@
                     <span class="gh-case-study-arrow">→</span>
                   </div>
                 </div>
+                {{#if feature_image}}
+                  <div class="gh-case-study-image-wrapper">
+                    <img
+                      class="gh-case-study-image"
+                      src="{{feature_image}}"
+                      alt="{{title}}"
+                    />
+                  </div>
+                {{/if}}
               </a>
             </article>
           {{/foreach}}
