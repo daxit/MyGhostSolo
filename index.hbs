@@ -32,14 +32,52 @@
                 {{#if @custom.secondary_header}}
                     <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
                 {{/if}}
-                {{#if @site.members_enabled}}
-                    {{#unless @member}}
-                        <div class="gh-subscribe-input" data-portal>
-                            jamie@example.com
-                            <span class="gh-btn gh-primary-btn">Subscribe</span>
-                        </div>
-                    {{/unless}}
-                {{/if}}
+                <div class="gh-about-buttons">
+                    <a href="#consulting" class="gh-btn gh-primary-btn">Learn About Consulting</a>
+                    <a href="/case-studies" class="gh-btn gh-secondary-btn">View Case Studies</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gh-consulting gh-outer">
+    <div class="gh-consulting-inner gh-inner">
+        <div class="gh-consulting-content">
+            <h2>Strategic Technology & Business Consulting</h2>
+            <p>With over two decades of experience leading global technology initiatives and transformations, I help organizations optimize their operations, scale efficiently, and drive substantial revenue growth.</p>
+            
+            <div class="gh-consulting-grid">
+                <div class="gh-consulting-item">
+                    <h3>Technology Transformation</h3>
+                    <p>Expertise in cloud migration, RAN solutions, and emerging technologies. Successfully led $300M+ technology transformations and achieved a groundbreaking $14B Open RAN implementation.</p>
+                </div>
+                
+                <div class="gh-consulting-item">
+                    <h3>Solutions Engineering</h3>
+                    <p>Architected and deployed innovative cloud-based solutions across major platforms, delivering 55% cost efficiency improvements and transforming traditional infrastructure into scalable cloud solutions.</p>
+                </div>
+                
+                <div class="gh-consulting-item">
+                    <h3>SRE & Operations Support</h3>
+                    <p>Built and scaled high-performing teams across 93+ countries, achieving 90% improvement in CSAT scores and establishing 9 global excellence centers for 24/7 operational support.</p>
+                </div>
+                
+                <div class="gh-consulting-item">
+                    <h3>Revenue Growth</h3>
+                    <p>Demonstrated ability to revitalize businesses, generating $45M+ in revenue with 40% profit margins and driving 11% YoY support revenue growth through customer-centric programs.</p>
+                </div>
+            </div>
+
+            <div class="gh-consulting-cta">
+                <div class="gh-consulting-cta-inner">
+                    <h3>Ready to transform your business?</h3>
+                    <p>Let's discuss how I can help you achieve your goals.</p>
+                    <a href="https://calendly.com/your-link" class="gh-btn gh-primary-btn" target="_blank">
+                        Schedule a Consultation
+                        <span class="gh-btn-arrow">→</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

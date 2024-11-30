@@ -1,0 +1,77 @@
+{{!< default}}
+
+<main class="gh-main gh-outer">
+  <div class="gh-inner">
+    <section class="gh-blogs-header gh-canvas">
+      <h1 class="gh-article-title">Blog Posts</h1>
+      <p class="gh-article-excerpt">Explore our latest articles and insights</p>
+    </section>
+
+    <div class="gh-blogs-feed">
+      {{#get "posts" limit="1" filter="featured:true" include="tags,authors"}}
+        {{#foreach posts}}
+          <article class="gh-blog-featured">
+            <a class="gh-blog-link" href="{{url}}">
+              {{#if feature_image}}
+                <img
+                  class="gh-blog-image"
+                  src="{{feature_image}}"
+                  alt="{{title}}"
+                />
+              {{/if}}
+              <div class="gh-blog-content">
+                <h2 class="gh-blog-title">{{title}}</h2>
+                {{#if custom_excerpt}}
+                  <p class="gh-blog-excerpt">{{custom_excerpt}}</p>
+                {{/if}}
+                <div class="gh-blog-meta">
+                  <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                  {{#if reading_time}}
+                    <span class="gh-blog-reading-time">{{reading_time}}</span>
+                  {{/if}}
+                  {{#if primary_tag}}
+                    <span class="gh-blog-tag">{{primary_tag.name}}</span>
+                  {{/if}}
+                </div>
+              </div>
+            </a>
+          </article>
+        {{/foreach}}
+      {{/get}}
+
+      <div class="gh-blogs-grid">
+        {{#get
+          "posts" limit="all" filter="featured:false" include="tags,authors"
+        }}
+          {{#foreach posts}}
+            <article class="gh-blog-card">
+              <a class="gh-blog-link" href="{{url}}">
+                {{#if feature_image}}
+                  <img
+                    class="gh-blog-image"
+                    src="{{feature_image}}"
+                    alt="{{title}}"
+                  />
+                {{/if}}
+                <div class="gh-blog-content">
+                  <h2 class="gh-blog-title">{{title}}</h2>
+                  {{#if custom_excerpt}}
+                    <p class="gh-blog-excerpt">{{custom_excerpt}}</p>
+                  {{/if}}
+                  <div class="gh-blog-meta">
+                    <time
+                      datetime="{{date format="YYYY-MM-DD"}}"
+                    >{{date}}</time>
+                    {{#if primary_tag}}
+                      <span class="gh-blog-tag">{{primary_tag.name}}</span>
+                    {{/if}}
+                  </div>
+                </div>
+              </a>
+            </article>
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+  </div>
+</main>

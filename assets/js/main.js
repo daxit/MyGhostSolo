@@ -1,54 +1,64 @@
 function initParallax() {
-    jarallax(document.querySelectorAll('.has-parallax-feed .gh-card'), {
-        speed: 0.8,
-    });
+  jarallax(document.querySelectorAll('.has-parallax-feed .gh-card'), {
+    speed: 0.8,
+  })
 }
 
-(function () {
-    if (!document.body.classList.contains('has-background-about')) return;
+;(function () {
+  if (!document.body.classList.contains('has-background-about')) return
 
-    const about = document.querySelector('.gh-about');
-    if (!about) return;
+  const about = document.querySelector('.gh-about')
+  if (!about) return
 
-    const image = about.querySelector('.gh-about-image');
+  const image = about.querySelector('.gh-about-image')
 
-    if (!image.naturalWidth) {
-        imagesLoaded(image, function () {
-            about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
-        });
-    }
-})();
+  if (!image.naturalWidth) {
+    imagesLoaded(image, function () {
+      about.style.setProperty(
+        '--about-height',
+        (image.clientWidth * image.naturalHeight) / image.naturalWidth + 'px',
+      )
+    })
+  }
+})()
 
-(function () {
-    initParallax();
-})();
+;(function () {
+  initParallax()
+})()
 
-(function () {
-    const toggle = document.querySelector('[data-toggle-comments]');
-    if (!toggle) return;
+;(function () {
+  const toggle = document.querySelector('[data-toggle-comments]')
+  if (!toggle) return
 
-    toggle.addEventListener('click', function () {
-        document.body.classList.toggle('comments-opened');
-    });
-})();
+  toggle.addEventListener('click', function () {
+    document.body.classList.toggle('comments-opened')
+  })
+})()
 
-(function () {
-    const element = document.querySelector('.gh-article-excerpt');
-    if (!element) return;
+;(function () {
+  const element = document.querySelector('.gh-article-excerpt')
+  if (!element) return
 
-    let text = element.textContent;
-    const emojiRE = /\p{EPres}|\p{ExtPict}/gu;
+  let text = element.textContent
+  const emojiRE = /\p{EPres}|\p{ExtPict}/gu
 
-    const emojis = text.match(emojiRE);
-    if (!emojis) return;
+  const emojis = text.match(emojiRE)
+  if (!emojis) return
 
-    emojis.forEach(function (emoji) {
-        text = text.replace(emoji, `<span class="emoji">${emoji}</span>`);
-    });
+  emojis.forEach(function (emoji) {
+    text = text.replace(emoji, `<span class="emoji">${emoji}</span>`)
+  })
 
-    element.innerHTML = text;
-})();
+  element.innerHTML = text
+})()
 
-(function () {
-    pagination(true, initParallax);
-})();
+;(function () {
+  pagination(true, initParallax)
+})()
+
+document.querySelector('a[href="#consulting"]').addEventListener('click', function (e) {
+  e.preventDefault()
+  document.querySelector('.gh-consulting').scrollIntoView({
+    behavior: 'smooth',
+  })
+})
