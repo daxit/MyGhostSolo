@@ -1,7 +1,7 @@
 {
-  "name": "solo",
+  "name": "vj-solo",
   "description": "A Ghost theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "engines": {
     "ghost": ">=5.0.0"
@@ -108,6 +108,7 @@
     "@tryghost/shared-theme-assets": "2.5.0",
     "autoprefixer": "10.4.20",
     "beeper": "2.1.0",
+    "browserlist": "^1.0.1",
     "cssnano": "7.0.6",
     "gscan": "4.46.0",
     "gulp": "5.0.0",
