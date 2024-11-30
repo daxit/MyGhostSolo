@@ -1400,12 +1400,56 @@ hr {
   max-width: var(--container-width);
 }
 
+/* Update existing styles and add new ones */
 .gh-case-study-card {
-  background: var(--color-lighter-gray);
-  border: 1px solid var(--color-border);
+  background: none;
+  border: none;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
+}
+
+.gh-case-study-card:nth-child(1) .gh-case-study-content {
+  background-color: #e6d5c3; /* Warm Sand */
+  color: #2c1810;
+}
+
+.gh-case-study-card:nth-child(2) .gh-case-study-content {
+  background-color: #c8d6af; /* Sage Green */
+  color: #2c1810;
+}
+
+.gh-case-study-card:nth-child(3) .gh-case-study-content {
+  background-color: #d6bbb1; /* Dusty Rose */
+  color: #2c1810;
+}
+
+/* Update title color for all cards */
+.gh-case-study-card .gh-case-study-title {
+  color: #2c1810;
+}
+
+/* Update excerpt color for all cards */
+.gh-case-study-card .gh-case-study-excerpt {
+  color: #4a2511;
+}
+
+/* Update meta text color for all cards */
+.gh-case-study-card .gh-case-study-meta {
+  color: #4a2511;
+}
+
+/* Update arrow color for each card */
+.gh-case-study-card:nth-child(1) .gh-case-study-arrow {
+  color: #8b5e3c;
+}
+
+.gh-case-study-card:nth-child(2) .gh-case-study-arrow {
+  color: #5b7340;
+}
+
+.gh-case-study-card:nth-child(3) .gh-case-study-arrow {
+  color: #96665a;
 }
 
 .gh-case-study-card:hover {
@@ -1435,14 +1479,12 @@ hr {
   font-size: clamp(2.4rem, 0.5vw + 2rem, 3.2rem);
   font-weight: 800;
   margin-bottom: 16px;
-  color: var(--color-darker-gray);
   line-height: 1.2;
 }
 
 .gh-case-study-excerpt {
   font-size: 1.8rem;
   line-height: 1.6;
-  color: var(--color-secondary-text);
   margin-bottom: 24px;
 }
 
@@ -1452,7 +1494,6 @@ hr {
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
-  color: var(--color-secondary-text);
 }
 
 .gh-case-study-image-wrapper {
@@ -1469,7 +1510,6 @@ hr {
 
 .gh-case-study-arrow {
   font-size: 2rem;
-  color: var(--color-blue);
   transition: transform 0.2s ease;
 }
 
