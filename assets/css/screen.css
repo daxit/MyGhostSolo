@@ -1012,24 +1012,87 @@ hr {
 /* ---------------------------------------------------------- */
 
 .gh-foot {
-  padding-top: clamp(8rem, 4.55vw + 6.18rem, 12rem);
-  padding-bottom: clamp(8rem, 4.55vw + 6.18rem, 12rem);
+  margin-top: 80px;
+  padding: 64px 0;
+  background-color: var(--color-lighter-gray);
 }
 
 .gh-foot-inner {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  align-items: center;
+  gap: 48px;
 }
 
-.gh-foot-menu {
+.gh-foot-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.gh-foot h3 {
+  font-size: clamp(2.4rem, 0.5vw + 2rem, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--color-darker-gray);
+}
+
+.gh-foot-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gh-foot-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gh-foot-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-secondary-text);
+}
+
+.gh-foot-value {
   font-size: 1.6rem;
-  font-weight: 700;
+  color: var(--color-darker-gray);
+  text-decoration: none;
+}
+
+.gh-foot-value:hover {
+  color: var(--color-accent);
+}
+
+.gh-foot-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
 }
 
 .gh-copyright {
   font-size: 1.4rem;
+  color: var(--color-secondary-text);
+  text-align: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 767px) {
+  .gh-foot {
+    margin-top: 64px;
+    padding: 48px 0;
+  }
+
+  .gh-foot-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .gh-foot-buttons {
+    flex-direction: column;
+  }
 }
 
 /* Consulting section

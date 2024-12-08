@@ -90,23 +90,10 @@
 
     {{{body}}}
 
-    {{> "consulting-cta"}}
+    {{!-- {{> "consulting-cta"}} --}}
 
-    <footer class="gh-foot gh-outer">
-        <div class="gh-foot-inner gh-inner">
-            <nav class="gh-foot-menu">
-                {{navigation type="secondary"}}
-            </nav>
+    {{> "footer"}}
 
-            <div class="gh-copyright">
-                {{#unless @custom.footer_text}}
-                    {{@site.title}} © {{date format="YYYY"}}. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
-                {{else}}
-                    {{@custom.footer_text}}
-                {{/unless}}
-            </div>
-        </div>
-    </footer>
 
 </div>
 
