@@ -2224,13 +2224,14 @@ hr {
 
 .gh-testimonial-slides {
   display: flex;
-  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .gh-testimonial {
   flex: 0 0 100%;
-  padding: 40px;
-  transition: transform 0.5s ease;
+  width: 100%;
+  transition: opacity 0.3s ease;
 }
 
 .gh-testimonial-content {
