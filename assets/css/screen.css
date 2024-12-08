@@ -2379,3 +2379,22 @@ hr {
   gap: 12px;
   align-items: center;
 }
+
+.gh-about-image {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+  mix-blend-mode: multiply;
+}
+
+.gh-about-image:hover {
+  transform: translateY(-8px);
+}
+
+@media (max-width: 767px) {
+  .gh-about-image {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
