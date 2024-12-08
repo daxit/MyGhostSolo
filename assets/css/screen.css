@@ -2200,24 +2200,9 @@ hr {
 
 /* Testimonials Section */
 .gh-testimonials {
-  padding: 100px 0;
-  background-color: #f7f2eb;
+  padding: 120px 0 100px;
+  background: linear-gradient(180deg, #fff 0%, #f7f2eb 100%);
   position: relative;
-}
-
-.gh-testimonials::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(139, 115, 85, 0.2),
-    transparent
-  );
 }
 
 .gh-testimonials-inner {
@@ -2230,9 +2215,10 @@ hr {
   text-align: center;
   font-size: clamp(3.2rem, 0.5vw + 2.8rem, 4.2rem);
   color: #5b4f3f;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
   position: relative;
   padding-bottom: 24px;
+  font-weight: 600;
 }
 
 .gh-testimonials h2::after {
@@ -2241,9 +2227,14 @@ hr {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 120px;
   height: 3px;
-  background: linear-gradient(90deg, transparent, #8c7355, transparent);
+  background: linear-gradient(
+    90deg,
+    rgba(139, 115, 85, 0),
+    rgba(139, 115, 85, 0.7),
+    rgba(139, 115, 85, 0)
+  );
 }
 
 .gh-testimonials-carousel {
