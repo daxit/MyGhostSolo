@@ -2200,74 +2200,120 @@ hr {
 
 /* Testimonials Section */
 .gh-testimonials {
-  padding: 80px 0;
-  background-color: #f7f2eb; /* Light earthy background */
+  padding: 100px 0;
+  background-color: #f7f2eb;
+  position: relative;
+}
+
+.gh-testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 115, 85, 0.2),
+    transparent
+  );
 }
 
 .gh-testimonials-inner {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 32px;
 }
 
 .gh-testimonials h2 {
   text-align: center;
-  font-size: clamp(2.8rem, 0.5vw + 2.4rem, 3.6rem);
+  font-size: clamp(3.2rem, 0.5vw + 2.8rem, 4.2rem);
   color: #5b4f3f;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.gh-testimonials h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8c7355, transparent);
 }
 
 .gh-testimonials-carousel {
   position: relative;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .gh-testimonial-slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gh-testimonial {
   flex: 0 0 100%;
-  width: 100%;
-  transition: opacity 0.3s ease;
+  padding: 20px 40px;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gh-testimonial.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .gh-testimonial-content {
   background: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(139, 115, 85, 0.1);
+  padding: 48px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(139, 115, 85, 0.08);
   position: relative;
+  transition: transform 0.3s ease;
+}
+
+.gh-testimonial-content:hover {
+  transform: translateY(-4px);
 }
 
 .gh-testimonial-quote {
   position: absolute;
   top: -16px;
   left: 24px;
-  opacity: 0.2;
+  opacity: 0.15;
+  transform: scale(1.2);
 }
 
 .gh-testimonial p {
   font-size: 1.8rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #5b4f3f;
   margin: 24px 0;
+  font-style: italic;
 }
 
 .gh-testimonial-author {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(139, 115, 85, 0.2);
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(139, 115, 85, 0.15);
 }
 
 .gh-testimonial-author strong {
   color: #8c7355;
   font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .gh-testimonial-author span {
@@ -2280,29 +2326,45 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  margin-top: 32px;
+  gap: 32px;
+  margin-top: 48px;
 }
 
 .gh-testimonial-btn {
   background: none;
   border: 2px solid #8c7355;
   color: #8c7355;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  font-size: 1.8rem;
 }
 
 .gh-testimonial-btn:hover {
   background: #8c7355;
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.2);
 }
 
-.gh-testimonial-dots {
-  display: flex;
-  gap: 8px;
+@media (max-width: 767px) {
+  .gh-testimonials {
+    padding: 64px 0;
+  }
+
+  .gh-testimonial {
+    padding: 16px;
+  }
+
+  .gh-testimonial-content {
+    padding: 32px 24px;
+  }
+
+  .gh-testimonials h2 {
+    margin-bottom: 40px;
+  }
 }
 
 .gh-testimonial-dot {
@@ -2311,22 +2373,18 @@ hr {
   border-radius: 50%;
   background: rgba(139, 115, 85, 0.3);
   cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: all 0.3s ease;
 }
 
 .gh-testimonial-dot.active {
   background: #8c7355;
+  transform: scale(1.3);
 }
 
-@media (max-width: 767px) {
-  .gh-testimonials {
-    padding: 48px 16px;
-  }
-
-  .gh-testimonial {
-    padding: 20px;
-  }
-
-  .gh-testimonial-content {
-    padding: 24px;
-  }
+.gh-testimonial-dots {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }

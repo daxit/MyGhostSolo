@@ -89,6 +89,11 @@ function initTestimonialCarousel() {
         
         slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
         
+        // Update active states
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentSlide);
+        });
+        
         // Update dots
         document.querySelectorAll('.gh-testimonial-dot').forEach((dot, index) => {
             dot.classList.toggle('active', index === currentSlide);
@@ -97,7 +102,7 @@ function initTestimonialCarousel() {
         // Reset animation lock after transition
         setTimeout(() => {
             isAnimating = false;
-        }, 500); // Match this with your CSS transition duration
+        }, 500);
     }
 
     function goToSlide(index) {
