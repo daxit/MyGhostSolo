@@ -96,6 +96,10 @@
         ],
         "default": "Classic",
         "group": "homepage"
+      },
+      "profile_image": {
+        "type": "image",
+        "default": "images/vijay-profile.png"
       }
     }
   },
